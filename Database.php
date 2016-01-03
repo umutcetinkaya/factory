@@ -18,9 +18,9 @@ class Database extends Factory {
 
     function GetResults()
     {
-
+        
         $QueryString = $this->GetQueryString('SELECT');
-        $Query = $this->conn->prepare($QueryString);
+        $Query = $this->Conn->prepare($QueryString);
         $Query->execute();
         return $Query->fetchAll();
 
